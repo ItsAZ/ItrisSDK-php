@@ -160,19 +160,19 @@ El método que inicializa la conexión con el WebService y crea el **soapClient*
     };
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 200
-     * **message** [String] = 'Conexión establecida'
-     * **error** [Boolean] =  false
-     * **SoapClient** [Objeto] =  Instancia del cliente creado
-    * Error en la petición
-      * **status**  [Integer]  = 400
-      * **message** [String] = Mensaje de error cliente
-      * **error** [Boolean] =  true
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true
+  * Éxito en la petición
+    * **status**  [Integer]  = 200
+    * **message** [String] = 'Conexión establecida'
+    * **error** [Boolean] =  false
+    * **SoapClient** [Objeto] =  Instancia del cliente creado
+  * Error en la petición
+    * **status**  [Integer]  = 400
+    * **message** [String] = Mensaje de error cliente
+    * **error** [Boolean] =  true
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
 
 <a name="ItsLogin"></a>
 
@@ -201,20 +201,20 @@ El método que inicia la sesión del usuario con el WebService y crea el **UserS
    }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 201
-     * **message** [String] = 'Inicio de sesión exitoso'
-     * **error** [Boolean] =  false
-     * **UserSession** [String] =  Token de sesión del usuario (vence con 15 minutos de inactividad)
-    * Error en la petición
-      * **status**  [Integer]  = 403
-      * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true
+  * Éxito en la petición
+    * **status**  [Integer]  = 201
+    * **message** [String] = 'Inicio de sesión exitoso'
+    * **error** [Boolean] =  false
+    * **UserSession** [String] =  Token de sesión del usuario (vence con 15 minutos de inactividad)
+  * Error en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
+    * **error** [Boolean] =  true
+    * **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
 
 <a name="ItsLogout"></a>
 
@@ -242,19 +242,19 @@ El método que termina la sesión activa de un usuario y destruye el **UserSessi
     }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 200
-     * **message** [String] = 'Finalizó la sesión ' . $sUserSession . ' correctamente'
-     * **error** [Boolean] =  false
-    * Error en la petición
-      * **status**  [Integer]  = 403
-      * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true
+  * Éxito en la petición
+    * **status**  [Integer]  = 200
+    * **message** [String] = 'Finalizó la sesión ' . $sUserSession . ' correctamente'
+    * **error** [Boolean] =  false
+  * Error en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
+    * **error** [Boolean] =  true
+  	* **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
 
 <a name="ItsGetLastError"></a>
 
@@ -293,20 +293,20 @@ NOTA: Este método **no devuelve excepciones del servidor ni fallos de conexión
     }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 403
-     * **message** [String] = Mensaje de error devuelto por el cliente Itris
-     * **error** [Boolean] =  false
-     * **UserSession** [String] = Token de sesión
-    * Error en la petición
-      * **status**  [Integer]  = 200
-      * **message** [String] = 'No se encontró ningún error con el UserSession ' . $sUserSession
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true
+  * Éxito en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Mensaje de error devuelto por el cliente Itris
+    * **error** [Boolean] =  false
+    * **UserSession** [String] = Token de sesión
+  * Error en la petición
+    * **status**  [Integer]  = 200
+    * **message** [String] = 'No se encontró ningún error con el UserSession ' . $sUserSession
+    * **error** [Boolean] =  true
+    * **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
 
 <a name="ItsGetData"></a>
 
@@ -348,20 +348,20 @@ El método que trae registros de una clase de Itris. Devuelve una estructura que
     }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 200
-     * **message** [String] = 'Se encontraron ' . $RecordCount . ' registros solicitados'
-     * **error** [Boolean] =  false
-     * **data**  [Array] = Data que devuelve el WebService
-    * Error en la petición
-      * **status**  [Integer]  = 403
-      * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true
+  * Éxito en la petición
+    * **status**  [Integer]  = 200
+    * **message** [String] = 'Se encontraron ' . $RecordCount . ' registros solicitados'
+    * **error** [Boolean] =  false
+    * **data**  [Array] = Data que devuelve el WebService
+  * Error en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
+    * **error** [Boolean] =  true
+    * **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
 
 <a name="ItsPrepareAppend"></a>
 
@@ -412,21 +412,21 @@ El formato de la estructura devuelva es similar al del [ItsGetData](#ItsGetData)
     }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 200
-     * **message** [String] = 'Se inició correctamente la inserción del registro'
-     * **DataSession** [String] = Token de sesión de inserción del registro. Debe ser enviado en todas las peticiones asociadas a la inserción del mismo.
-     * **error** [Boolean] =  false
-     * **data**  [Array] = Data de inicialización que devuelve el WebService
-    * Error en la petición
-      * **status**  [Integer]  = 403
-      * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true 
+  * Éxito en la petición
+    * **status**  [Integer]  = 200
+    * **message** [String] = 'Se inició correctamente la inserción del registro'
+    * **DataSession** [String] = Token de sesión de inserción del registro. Debe ser enviado en todas las peticiones asociadas a la inserción del mismo.
+    * **error** [Boolean] =  false
+    * **data**  [Array] = Data de inicialización que devuelve el WebService
+  * Error en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
+    * **error** [Boolean] =  true
+    * **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true 
 
 <a name="ItsSetData"></a>
 
@@ -488,22 +488,22 @@ $oSoapClient , $sUserSession , $sDataSession , $JSONData , &$oXMLData
     }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 302
-     * **message** [String] = 'La inserción de datos se ha realizado exitosamente'
-     * **UserSession** [String] = Token de sesión del usuario.
-     * **DataSession** [String] = Token de sesión del dataset. Debe ser enviado en todas las peticiones asociadas a la inserción o modificación del mismo.
-     * **error** [Boolean] =  false
-     * **data**  [Array] = Data con validación de eventos al cambiar que devuelve el WebService
-    * Error en la petición
-      * **status**  [Integer]  = 403
-      * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true
+  * Éxito en la petición
+    * **status**  [Integer]  = 302
+    * **message** [String] = 'La inserción de datos se ha realizado exitosamente'
+    * **UserSession** [String] = Token de sesión del usuario.
+    * **DataSession** [String] = Token de sesión del dataset. Debe ser enviado en todas las peticiones asociadas a la inserción o modificación del mismo.
+    * **error** [Boolean] =  false
+    * **data**  [Array] = Data con validación de eventos al cambiar que devuelve el WebService
+  * Error en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
+    * **error** [Boolean] =  true
+    * **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
 
 <a name="ItsPost"></a>
 
@@ -567,19 +567,19 @@ El formato de la estructura devuelva es similar al del [ItsGetData](#ItsGetData)
     }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 200
-     * **message** [String] = 'Comprobante creado exitosamente'
-     * **data** [Array] = Información definitiva con la que el registro queda guardado en el sistema
-    * Error en la petición
-      * **status**  [Integer]  = 403
-      * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-      * **error** [Boolean] =  true
+  * Éxito en la petición
+    * **status**  [Integer]  = 200
+    * **message** [String] = 'Comprobante creado exitosamente'
+    * **data** [Array] = Información definitiva con la que el registro queda guardado en el sistema
+  * Error en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
+    * **error** [Boolean] =  true
+    * **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
 
 <a name="ItsDelete"></a>
 
@@ -609,20 +609,16 @@ Elimina el registro con el ID pasado por parámetro de una clase determinada.
     }
 ```
 #### Response
-   * Éxito en la petición
-     * **status**  [Integer]  = 302
-     * **message** [String] = 'Se eliminó el registro correctamente'
-     * **error** [Boolean] = false
-    * Error en la petición
-      * **status**  [Integer]  = 403
-      * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
-      * **error** [Boolean] =  true
-      * **UserSession** [String] =  Token de sesión del usuario
-    * Excepción en la conexión
-      * **status**  [Integer]  = 500
-      * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
-<<<<<<< HEAD
-      * **error** [Boolean] =  true
-=======
-      * **error** [Boolean] =  true
->>>>>>> 1368d42904f693a14ecf02b64b108613e904369b
+  * Éxito en la petición
+    * **status**  [Integer]  = 302
+    * **message** [String] = 'Se eliminó el registro correctamente'
+    * **error** [Boolean] = false
+  * Error en la petición
+    * **status**  [Integer]  = 403
+    * **message** [String] = Resultado de [ItsGetLastError](#ItsGetLastError)
+    * **error** [Boolean] =  true
+    * **UserSession** [String] =  Token de sesión del usuario
+  * Excepción en la conexión
+    * **status**  [Integer]  = 500
+    * **message** [String] = 'Error en el servidor: ' . $exception->getMessage()
+    * **error** [Boolean] =  true
