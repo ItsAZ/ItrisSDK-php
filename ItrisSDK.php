@@ -112,14 +112,14 @@
  				$response = array(
  					'status' => 403,
  					'message' => $ErrorResult['Error'],
- 					'error' => false,
+ 					'error' => true,
  					'UserSession' => $sUserSession
  				);
  			} else {
  				$response = array(
  					'status' => 200,
  					'message' => 'No se encontró ningún error con el UserSession ' . $sUserSession,
- 					'error' => true,
+ 					'error' => false,
  					'UserSession' => $sUserSession
  				);
  			}
