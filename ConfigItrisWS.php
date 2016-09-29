@@ -17,6 +17,6 @@
 	 */
 	
 	$ws = 'http://itris.no-ip.com:85/ITSWS/ItsCliSvrWS.asmx?WSDL';
-	$db = 'AGULARES2';
-	$user = "AZARATE";
+	$db = "";
+	$user = "";
 	$pass = "";
