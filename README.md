@@ -139,10 +139,10 @@ El método que inicializa la conexión con el WebService y crea el **soapClient*
 
 #### Definición de la función
 
-| Parámetros        | Descripción           | Obligatorio    | Valor por defecto |
-| :-------------:   |:-------------:        | :------------: | :------------:    |
-| $ws               | URL absoluta del WebService | Si       | null              |
-| &soapClient       | Parámetro pasado por referencia para instanciar el cliente en la variable      | No | null |
+| Parámetros        | Descripción                 | Obligatorio    | Valor por defecto |
+| :-------------:   |:-------------:              | :------------: | :------------:    |
+| $ws               | URL absoluta del WebService | Si             | null              |
+| &soapClient       | Parámetro pasado por referencia para instanciar el cliente en la variable  | No | null    |
 ##### Sintaxis
 
 ```php
@@ -452,14 +452,14 @@ El formato de la estructura devuelva es similar al del [ItsGetData](#ItsGetData)
       * UN ROW POR CADA DETALLE
 
 #### Definición de la función
-$oSoapClient , $sUserSession , $sDataSession , $JSONData , &$oXMLData
-| Parámetros        | Descripción           | Obligatorio    | Valor por defecto |
-| :-------------:   |:-------------:        | :------------: | :------------:    |
+
+| Parámetros        | Descripción              | Obligatorio    | Valor por defecto |
+| :-------------:   |:-------------:           | :------------: | :------------:    |
 | $oSoapClient      | Referencia al cliente soap creado en ItsCreateClient | Si       | null           |
-| $UserSession    | Token de sesión de usuario  | Si | null |
-| $DataSession    | Token de sesión de inserción del registro  | Si | null |
+| $UserSession      | Token de sesión de usuario  | Si | null |
+| $DataSession      | Token de sesión de inserción del registro  | Si | null |
 | $JSONData    | Data a insertar en formato JSON. Debe ser enviado el dataset que se recibió de [ItsPrepareAppend](#ItsPrepareAppend) con las modificaciones correspondientes | Si | null |
-| &oXMLData | Referencia al XMLData que se transacciona  | No | null |
+| &oXMLData    | Referencia al XMLData que se transacciona  | No | null |
 ##### Sintaxis
 
 ```php
