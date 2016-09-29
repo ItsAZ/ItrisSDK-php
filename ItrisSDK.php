@@ -313,7 +313,8 @@
  				$response = array(
  					'status' => 200,
  					'message' => 'Comprobante creado exitosamente',
- 					'data' => $ResponseData
+ 					'data' => $ResponseData,
+ 					'error' => false
  				);
  			} else {
  				$response = $this -> ItsGetLastError( $oSoapClient , $sUserSession );
