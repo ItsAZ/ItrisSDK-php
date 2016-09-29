@@ -471,9 +471,8 @@ El formato de la estructura devuelva es similar al del [ItsGetData](#ItsGetData)
             // Ejemplo: setear fecha y empresa del pedido
             $DataSession = $do_prepare_append['DataSession'];
             $dataset = $do_prepare_append['data'];
-            $row_data = $dataset->ROWDATA->ROW[0];
-            $row_data['FECHA'] = '31/10/1993';
-            $row_data['FK_ERP_EMPRESAS'] = '12345678';
+            $dataset->ROWDATA->ROW[0]->FECHA = '31/10/1993';
+            $dataset->ROWDATA->ROW[0]->FK_ERP_EMPRESAS = '12345678';
             
             $do_set_data = $Itris->ItsSetData( $soapClient , $UserSession , $DataSession , $dataset );
             if(!$do_set_data['error']) {
